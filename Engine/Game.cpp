@@ -16,7 +16,7 @@
  *	GNU General Public License for more details.										  *
  *																						  *
  *	You should have received a copy of the GNU General Public License					  *
- *	along with The Chili DirectX Framework.  If not, see <http://www.gnu.org/licenses/>.  *
+ *	along with The Chili DirectX Framework.  If not, see < >.  *
  ******************************************************************************************/
 #include "MainWindow.h"
 #include "Game.h"
@@ -24,7 +24,9 @@
 Game::Game( MainWindow& wnd )
 	:
 	wnd( wnd ),
-	gfx( wnd )
+	gfx( wnd ),
+	//Dette er det som ikke fungerer som det skal:
+	p1(Vec2(100, 100), std::array<unsigned char, 4> controls_in = {0x57, 0x53, 0x41, 0x44})
 {
 }
 
@@ -38,8 +40,10 @@ void Game::Go()
 
 void Game::UpdateModel()
 {
+	
 }
 
 void Game::ComposeFrame()
 {
+	
 }

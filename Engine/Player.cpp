@@ -1,5 +1,15 @@
 #include "Player.h"
 
+Player::Player(Vec2 pos_in, unsigned char controls_in[4])
+{
+	pos = pos_in;
+	vel = Vec2(0.0f, 0.0f);
+	for (int i = 0; i < 4; i++)
+	{
+		controls[i] = controls_in[i];
+	}
+}
+
 void Player::Draw(Graphics& gfx, int state)
 {
 	int x = int(pos.x);
